@@ -12,15 +12,15 @@
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
-          <input class="search-form-input" type="search" placeholder="Enter a city..." required />
+        <form class="search-form" id="search-form">
+          <input id="search-input" class="search-form-input" type="search" placeholder="Enter a city..." required />
           <input class="search-form-button" type="submit" value="Search"/>
         </form>
       </header>
     <main>
       <div class="weather-app-data">
     <div>
-      <h1 class="weather-app-city">Paris</h1>
+      <h1 class="weather-app-city" id="weather-app-city">Paris</h1>
       <p class="weather-details">Tuesday 14:49, scattered clouds
         <br/>
         Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
@@ -41,5 +41,6 @@
       and deployed on
       <a href="">Vercel</a>
     </footer></div>
+    <script src="/src/script.js"></script>
   </body>
 </html>
