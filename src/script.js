@@ -4,15 +4,20 @@ function displayWeather(response){
     let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
-    let iconElement = document.querySelector("#icon");
     let timeElement = document.querySelector('#time')
     let date = new Date(response.data.time * 1000)
+
+    let iconElement = document.querySelector('#icon')
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" /> `;
+
+
     cityElement.innerHTML = response.data.city;
     temperature.innerHTML = Math.round(response.data.temperature.current);
     timeElement.innerHTML = formatDate(date)
     windElement.innerHTML = `${response.data.wind.speed}km / h`;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     descriptionElement.innerHTML = response.data.condition.description 
+
     console.log(response.data);
 }
 
